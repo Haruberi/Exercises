@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ExercisesSchool
 {
@@ -19,11 +20,11 @@ namespace ExercisesSchool
             Elements in array are: 1 1 2 3 4 5 6 7 8 9
              */
 
-            /*int[] numbers = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] numbers = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             for (int i = 0; i < numbers.Length; i++)
             {
                 Console.Write(" " + numbers[i]);
-            }*/
+            }
 
             /*
              2. Write a program in C# Sharp to read n number of values in an array and display it in reverse order. Test Data :
@@ -42,7 +43,7 @@ namespace ExercisesSchool
             int[] reversedElements = threeElements;
             Console.Write("The values store into the array are: ");
             Console.WriteLine();
-            foreach(var i in threeElements)
+            foreach (var i in threeElements)
             {
                 Console.Write(" " + i);
             }
@@ -50,13 +51,32 @@ namespace ExercisesSchool
             Array.Reverse(reversedElements);
             Console.Write("The values store into the array in reverse are: ");
             Console.WriteLine();
-            foreach(int i in reversedElements)
+            foreach (int i in reversedElements)
             {
                 Console.Write(" " + i);
             }
-            }
+            Console.WriteLine();
+            /*
+             3. Write a program in C# Sharp to find the 
+            sum of all elements of the array.
+            Test Data :
+            Input the number of elements to be stored in the array :3
+            Input 3 elements in the array :
+            element - 0 : 2
+            element - 1 : 5
+            element - 2 : 8
+            Expected Output :
+            Sum of all elements stored in the array is : 15
+             */
+            var sumOfElements = new int[3] { 2, 5, 8 };
+            int sum = sumOfElements.Sum();
+            Console.Write("Sum of all elements stored in the array is: {0}", sum);
         }
     }
+}
+
+    
+    
 
         
     
