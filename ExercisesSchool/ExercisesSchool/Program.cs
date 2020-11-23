@@ -22,11 +22,13 @@ namespace ExercisesSchool
              */
 
             int[] numbers = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Console.Write("Elements in Array are: ");
             for (int i = 0; i < numbers.Length; i++)
             {
                 Console.Write(" " + numbers[i]);
             }
 
+            Console.WriteLine();
             /*
              2. Write a program in C# Sharp to read n number of values in an array and display it in reverse order. Test Data :
             Input the number of elements to store in the array :3
@@ -116,6 +118,27 @@ namespace ExercisesSchool
             {
                 Console.WriteLine($"{item.Key} occurs {item.Count()} times");
             }
+            Console.WriteLine();
+
+            /*
+             6. Write a program in C# Sharp to find maximum
+            and minimum element in an array.
+            Test Data :
+            Input the number of elements to be stored in the array :3
+            Input 3 elements in the array :
+            element - 0 : 45
+            element - 1 : 25
+            element - 2 : 21
+            Expected Output :
+            Maximum element is : 45
+            Minimum element is : 21
+             */
+
+            int[] maximumMinimumNumbers = { 45, 25, 21 };
+            Console.WriteLine("Maximum element is: " + maximumMinimumNumbers.Max());
+            Console.WriteLine("Minimum element is: " + maximumMinimumNumbers.Min());
+
+            Console.WriteLine();
         }
     }
 }
