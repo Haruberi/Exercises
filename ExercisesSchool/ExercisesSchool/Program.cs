@@ -91,6 +91,31 @@ namespace ExercisesSchool
             int[] uniqueNumbers = { 1, 5, 1 };
             int[] distinctNumbers = uniqueNumbers.Distinct().ToArray();
             Array.ForEach(distinctNumbers, v => Console.WriteLine(v));
+
+            Console.WriteLine();
+
+            /*
+             5. Write a program in C# Sharp to count the
+            frequency of each element of an array.
+                Test Data :
+                Input the number of elements to be stored in the array :3
+                Input 3 elements in the array :
+                element - 0 : 25
+                element - 1 : 12
+                element - 2 : 43
+                Expected Output :
+                Frequency of all elements of array :
+                25 occurs 1 times
+                12 occurs 1 times
+                43 occurs 1 times
+             */
+
+            int[] freequencyNumbers = { 25, 12, 43 };
+
+            foreach(var item in freequencyNumbers.GroupBy(x => x))
+            {
+                Console.WriteLine($"{item.Key} occurs {item.Count()} times");
+            }
         }
     }
 }
