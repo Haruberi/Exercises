@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ExercisesSchool
@@ -71,9 +72,29 @@ namespace ExercisesSchool
             var sumOfElements = new int[3] { 2, 5, 8 };
             int sum = sumOfElements.Sum();
             Console.Write("Sum of all elements stored in the array is: {0}", sum);
+
+            Console.WriteLine();
+
+            /*
+             4. Write a program in C# Sharp to print all 
+            unique elements in an array.
+            Test Data :
+            Input the number of elements to be stored in the array :3
+            Input 3 elements in the array :
+            element - 0 : 1
+            element - 1 : 5
+            element - 2 : 1
+            Expected Output :
+            The unique elements found in the array are : 5
+             */
+
+            int[] uniqueNumbers = { 1, 5, 1 };
+            int[] distinctNumbers = uniqueNumbers.Distinct().ToArray();
+            Array.ForEach(distinctNumbers, v => Console.WriteLine(v));
         }
     }
 }
+
 
     
     
